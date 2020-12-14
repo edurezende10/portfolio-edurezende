@@ -9,7 +9,7 @@
     --ff-secondary: 'Source Code Pro', monospace;
 
     --fw-reg:300;
-    --fw-bold:900;
+    --fw-bold: 900;
 
     --clr-light:#fff;
     --clr-dark:#303030;
@@ -54,6 +54,8 @@ img{
     display: block;
     max-width: 100% ;
 }
+strong { font-weight: var(--fw-bold) }
+
 /* Typography */
 h1,
 h2,
@@ -71,4 +73,25 @@ h2{
 }
 h3{
     font-size: var(--fs-h3);
+}
+
+.section-title {
+    margin-bottom: .25em;
+
+}
+.section-title-intro{
+    font-weight: var(--fw-reg);
+}
+.section-title-intro strong{
+    display: block;
+}
+.section-subtitle {
+    margin: 0;
+    font-size:var(--fs-h3);
+}
+.section-subtitle-intro,
+.section-subtitle-about{
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
+
 }
