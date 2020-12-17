@@ -243,3 +243,40 @@ nav {
         margin-left:2em;
     }
 }
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.about-me-img{
+    box-shadow: var(--bs);
+}
+
+@media (min-width:600px){
+    .about-me{
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+        'title img'
+        'subtitle img'
+        'text img';
+        grid-column-gap: 2em;
+    }
+    .section-title-about{
+        grid-area:title ;
+    }
+    .section-subtitle-about{
+        grid-column: 1/-1;
+        grid-row: 2;
+        position: relative;
+        left: -2em;
+        width: calc(100% + 4em);
+        text-align: center;
+        padding-left: 2em;
+        padding-right: calc(200px + 2em);
+    }
+    .about-me-img{
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}
