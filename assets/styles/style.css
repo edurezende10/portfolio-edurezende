@@ -174,7 +174,7 @@ header{
     padding: 1em;
 }
 .nav-logo {
-    max-width: 150px;
+    max-width: 100px;
 }
 .nav{
     position: fixed;
@@ -223,10 +223,21 @@ header{
     position: relative;
 
 }
+.nav-toggle{
+    padding: .5em;
+    background-color: transparent;
+    border:0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
 
 .hamburguer,
 .hamburguer::before,
 .hamburguer::after{
+    content: '';
     background-color: var(--clr-dark);
     width: 2em;
     height: 3px;
