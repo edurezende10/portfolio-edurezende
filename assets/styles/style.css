@@ -216,6 +216,47 @@ header{
 .nav-link:hover {
     color: var(--clr-accent);
 }
+.hamburguer {
+   
+
+    display: block;
+    position: relative;
+
+}
+
+.hamburguer,
+.hamburguer::before,
+.hamburguer::after{
+    background-color: var(--clr-dark);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+
+    transition:transform 250ms ease-in-out ;
+    -webkit-transition:transform 250ms ease-in-out ;
+    -moz-transition:transform 250ms ease-in-out ;
+    -ms-transition:transform 250ms ease-in-out ;
+    -o-transition:transform 250ms ease-in-out ;
+}
+.hamburguer::before,
+.hamburguer::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+}
+.hamburguer::before{
+    top: 6px;
+}
+.hamburguer::after{
+    bottom: 6px;
+}
+
 
 
 /*  Intro section  */
@@ -319,6 +360,9 @@ header{
 .about-me-img {
     box-shadow: var(--bs);
 }
+.about-me-img{
+    display: none;
+}
 
 @media (min-width:600px) {
     .about-me {
@@ -347,8 +391,10 @@ header{
     }
 
     .about-me-img {
+        display: inline-block;
         grid-area: img;
         position: relative;
+        top: 10px;
         z-index: 2;
     }
 }
