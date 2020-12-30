@@ -50,6 +50,10 @@ bs= box shadow
 
 /* General styles */
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -217,7 +221,6 @@ header{
     color: var(--clr-accent);
 }
 .hamburguer {
-   
 
     display: block;
     position: relative;
@@ -232,13 +235,47 @@ header{
     right: 1em;
     top: 1em;
     z-index: 1000;
+    
 }
+/*  class add with JS */
+
+.nav-open .nav{
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+}
+.nav-open .nav-toggle{
+    position: fixed;
+}
+
+.nav-open .hamburguer{
+    transform: rotate(.625turn);
+    -webkit-transform: rotate(.625turn);
+    -moz-transform: rotate(.625turn);
+    -ms-transform: rotate(.625turn);
+    -o-transform: rotate(.625turn);
+}
+.nav-open .hamburguer::before{
+    transform: rotate(90deg) translateX(-6px);
+    -webkit-transform: rotate(90deg) translateX(-6px);
+    -moz-transform: rotate(90deg) translateX(-6px);
+    -ms-transform: rotate(90deg) translateX(-6px);
+    -o-transform: rotate(90deg) translateX(-6px);
+}
+.nav-open .hamburguer::after{
+    opacity: 0;
+}
+/*  end  */
+
+
 
 .hamburguer,
 .hamburguer::before,
 .hamburguer::after{
     content: '';
-    background-color: var(--clr-dark);
+    background-color: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -252,6 +289,8 @@ header{
     -moz-transition:transform 250ms ease-in-out ;
     -ms-transition:transform 250ms ease-in-out ;
     -o-transition:transform 250ms ease-in-out ;
+       color: var(--clr-accent);
+
 }
 .hamburguer::before,
 .hamburguer::after{
@@ -260,9 +299,11 @@ header{
     left: 0;
     right: 0;
     
+    
 }
 .hamburguer::before{
     top: 6px;
+    
 }
 .hamburguer::after{
     bottom: 6px;
