@@ -449,6 +449,7 @@ header{
         top: 10px;
         z-index: 2;
     }
+
 }
 
 .my-work {
@@ -505,6 +506,14 @@ header{
     transform: scale(1.2);
     opacity: .5 ;
 }
+
+@media (max-width:800px) {
+    .portfolio-container{
+        display:block;
+    }
+
+}
+
 
 /* footer */
 .footer{
