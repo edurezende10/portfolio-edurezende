@@ -478,20 +478,33 @@ header{
     display: flex;
     margin-bottom: 50px;
 }
+.portfolio-container h3{
+    color: var(--clr-accent);
+    margin-top: 1em;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+}
 .portfolio-container p{
     max-width: 500px;
-    padding:50px;
+    padding: 20px 45px;
     font-size: 1.2em;
-    line-height: 1.5em;
+    line-height: 1.3em;
     align-self: center;
+    margin: 0;
+}
+.portfolio-reference{
+    color: inherit;
+    cursor: pointer;
 }
 .portfolio-item {
-   // background-color: var(--clr-accent);
+   background-color:rgb(48, 48, 48);
     overflow: hidden;
 }
 
 .portfolio-img {
-    height: 90%;
+    width:  430px;
+    height: 300px;
+    max-height: 90%;
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
