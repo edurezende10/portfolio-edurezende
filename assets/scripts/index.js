@@ -11,3 +11,4 @@ navLinks.forEach(links => {
         document.body.classList.remove('nav-open')
     })
 })
+
