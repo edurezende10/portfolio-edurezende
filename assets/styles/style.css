@@ -78,7 +78,11 @@ img {
 strong {
     font-weight: var(--fw-bold)
 }
-
+a::after,
+a::before,
+a:visited{
+    color: white;
+}
 :focus {
     outline: 3px solid var(--clr-accent);
     outline-offset: 3px;
@@ -101,6 +105,11 @@ strong {
     -moz-transition: transform 200ms ease-in-out;
     -ms-transition: transform 200ms ease-in-out;
     -o-transition: transform 200ms ease-in-out;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    width: fit-content;
+    margin:0 auto;
 }
 
 .btn:hover {
@@ -110,7 +119,11 @@ strong {
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
 }
-
+.github-icon{
+    font-size: 2em;
+    margin-right: .2em;
+    align-self: center;
+}
 /* Typography */
 h1,
 h2,
