@@ -522,7 +522,7 @@ header {
 @media (max-width: 800px) {
   .portfolio-container {
     display: block;
-  }
+  } 
 }
 @media (max-width: 800px) {
   .portfolio-img {
