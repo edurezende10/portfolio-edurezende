@@ -524,7 +524,7 @@ header {
     display: block;
   }
 }
-@media (max-width: 800) {
+@media (max-width: 800px) {
   .portfolio-img {
     margin: 0 auto;
   }
