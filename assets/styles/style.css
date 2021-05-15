@@ -349,13 +349,13 @@ header{
             "img subtitle";
         grid-template-columns: min-content max-content;
     }
-
+    
     .intro-img {
         grid-area: img;
         min-width: 250px;
         position: relative;
         z-index: 2;
-        margin: 0;
+        
     }
 
     .section-subtitle-intro {
@@ -365,10 +365,17 @@ header{
         grid-row: 2;
         text-align: right;
         position: relative;
-        left: -1.5em;
+        left: 1px;
         width: calc(100% + 1.5em);
     }
 }
+@media (max-width:600px) {
+    .intro-img {
+        display: none;
+    }
+}
+
+
 
 /*  My services section  */
 .my-services {
@@ -539,6 +546,11 @@ header{
         display:block;
     }
 
+}
+@media (max-width:600px) {
+    .portfolio-img {
+        margin: 0 auto;
+    }
 }
 
 
