@@ -10,6 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Portfolio Edu Rezende</title>
+    <script>
+        function getHash() {
+            return location.hash.slice(1)
+        }
+
+
+        window.addEventListener('hashchange', function () {
+            if (getHash()) {
+                document.title = getHash().charAt(0).toUpperCase() + getHash().slice(1) + " " + "Portfolio Edu Rezende"
+            } else {
+                document.title = "Portfolio Edu Rezende"
+            }
+            gtag('config', 'UA-203368306-1', {
+                'page_title': document.title,
+                'page_path': '/' + getHash()
+            });
+        }, false)
+    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-203368306-1"></script>
@@ -21,10 +40,13 @@
         }
         gtag('js', new Date());
 
-        gtag('config', 'UA-203368306-1');
+       // gtag('config', 'UA-203368306-1');
+        gtag('config', 'UA-203368306-1', {
+                'page_title': document.title,
+                'page_path': '/' + getHash()
+            });
     </script>
 
-    <title>Edu Rezende Portfolio</title>
 </head>
 
 <body>
@@ -38,9 +60,9 @@
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#stack" class="nav-link">Minha Stack</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">Sobre mim</a></li>
-                <li class="nav-item"><a href="#work" class="nav-link">Meus projetos</a></li>
+                <li class="nav-item"><a href="#My-stack" class="nav-link">Minha Stack</a></li>
+                <li class="nav-item"><a href="#about-me" class="nav-link">Sobre mim</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Meus projetos</a></li>
 
             </ul>
         </nav>
@@ -57,7 +79,7 @@
         <img src="./assets/img/dev-edu.jpg" alt="imagem do Eduardo diante do sol" class="intro-img">
     </section>
     <!--meus serviços -->
-    <section class="my-services" id="stack">
+    <section class="my-services" id="My-stack">
         <h2 class="section-title section-title-services">
             Stack de estudo
 
@@ -87,7 +109,7 @@
     </section>
     <!-- sobre mim -->
 
-    <section class="about-me" id="about">
+    <section class="about-me" id="about-me">
         <h2 class="section-title section-title-about">
             Quem sou eu...
         </h2>
@@ -103,7 +125,7 @@
 
     </section>
     <!-- meu trabalho -->
-    <section class="my-work" id="work">
+    <section class="my-work" id="projects">
         <h2 class="section-title">
             Meus projetos
         </h2>
