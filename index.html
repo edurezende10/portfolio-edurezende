@@ -11,45 +11,32 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <title>Portfolio Edu Rezende</title>
+
+    <!-- Google Tag Manager -->
     <script>
-        function getHash() {
-            return location.hash.slice(1)
-        }
-
-
-        window.addEventListener('hashchange', function () {
-            if (getHash()) {
-                document.title = getHash().charAt(0).toUpperCase() + getHash().slice(1) + " " + "Portfolio Edu Rezende"
-            } else {
-                document.title = "Portfolio Edu Rezende"
-            }
-            gtag('config', 'UA-203368306-1', {
-                'page_title': document.title,
-                'page_path': '/' + getHash()
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
             });
-        }, false)
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PML6DW9');
     </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-203368306-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-       // gtag('config', 'UA-203368306-1');
-        gtag('config', 'UA-203368306-1', {
-                'page_title': document.title,
-                'page_path': '/' + getHash()
-            });
-    </script>
+    <!-- End Google Tag Manager -->
 
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PML6DW9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
         <div class="nav-logo">
             <img src="assets/img/Logo-01.jpg" alt="">
